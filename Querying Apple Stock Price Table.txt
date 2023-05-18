@@ -1,0 +1,29 @@
+select * from tutorial.aapl_historical_stock_price
+
+select count(*) from tutorial.aapl_historical_stock_price
+
+select count(high) from tutorial.aapl_historical_stock_price where high is not null
+
+select count(low) from tutorial.aapl_historical_stock_price
+
+select count(date) as count_of_date from tutorial.aapl_historical_stock_price
+
+select * from tutorial.aapl_historical_stock_price
+
+select count(date) as c_date , count(year) as c_year , count(month) as c_month , count(open) as c_open , count(high) as c_high , count(low) as c_low ,count(close) as c_close , count(volume) as c_volume from tutorial.aapl_historical_stock_price
+
+select sum(volume) from tutorial.aapl_historical_stock_price
+
+select sum(open)/count(open) as average_open from tutorial.aapl_historical_stock_price
+
+select min(volume) as min_v , max(volume) as max_v from tutorial.aapl_historical_stock_price
+
+select min(low) as lowest_stock_price from tutorial.aapl_historical_stock_price
+
+select * from tutorial.aapl_historical_stock_price
+
+select max(close - open) as highest_single_day_increase from tutorial.aapl_historical_stock_price
+ 
+SELECT AVG(high) FROM tutorial.aapl_historical_stock_price
+
+select avg(volume) from tutorial.aapl_historical_stock_price

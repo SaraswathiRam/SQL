@@ -1,0 +1,101 @@
+select * from tutorial.billboard_top_100_year_end
+select count(*) from tutorial.billboard_top_100_year_end
+select * from tutorial.billboard_top_100_year_end order by year desc
+select * from tutorial.billboard_top_100_year_end where group_name like 'Peggy%' 
+select * from tutorial.billboard_top_100_year_end where artist like 'Pla__ers'
+select * from tutorial.billboard_top_100_year_end where artist like 'Four%'
+select * from tutorial.billboard_top_100_year_end where group_name like '%Ludacris%'
+select * from tutorial.billboard_top_100_year_end where group_name like 'DJ%'
+select * from tutorial.billboard_top_100_year_end where year_rank in (1,2,3)
+select * from tutorial.billboard_top_100_year_end where artist in ('Elvis Presley' , 'Pat Boone')
+
+select * from tutorial.billboard_top_100_year_end
+select  distinct artist from tutorial.billboard_top_100_year_end
+select distinct group_name from tutorial.billboard_top_100_year_end
+select distinct(group_name) from tutorial.billboard_top_100_year_end where group_name like '%Elvis%'
+select * from tutorial.billboard_top_100_year_end where group_name like '%Hammer%'
+select * from tutorial.billboard_top_100_year_end where group_name in ('Elvis Presley' , 'M.C. Hammer')
+
+select * from billboard_top_100_year_end where group_name in ()
+select * from tutorial.billboard_top_100_year_end where year_rank between 5 and 10 
+select * from tutorial.billboard_top_100_year_end where year_rank >=5 and year_rank <= 10
+select * from tutorial.billboard_top_100_year_end where artist is null
+
+select  * from tutorial.billboard_top_100_year_end
+select year , year_rank ,song_name from tutorial.billboard_top_100_year_end where year = 1956 and year_rank between 1 and 100
+select distinct year_rank from tutorial.billboard_top_100_year_end order by year_rank DESC
+select year , year_rank , song_name from tutorial.billboard_top_100_year_end where year between 1985 and 1990 and year_rank between 1 and 100
+
+select * from tutorial.billboard_top_100_year_end where song_name is NULL
+
+select * from tutorial.billboard_top_100_year_end where year = 2012 and year_rank <=3
+
+select * from tutorial.billboard_top_100_year_end
+where year = 2012
+and year_rank <= 3 
+and group_name like '%feat%'
+
+select * from tutorial.billboard_top_100_year_end where group_name like '%Ludacris%' and year_rank <= 10
+
+select * from tutorial.billboard_top_100_year_end where year_rank = 1 and year in (1990 ,  2000 , 2010)
+
+select * from tutorial.billboard_top_100_year_end where year between 1960 and 1969 and song_name like '%love%'
+
+select * from tutorial.billboard_top_100_year_end where year_rank = 5 or artist = 'Gotye'
+
+select * from tutorial.billboard_top_100_year_end
+select * from tutorial.billboard_top_100_year_end where year = 1956 and ( group_name like '%Elvis%' or group_name like 'Pla__ers')
+
+select * from tutorial.billboard_top_100_year_end where year_rank <=10 
+and (group_name Ilike '%katy perry%' or group_name Ilike '%bon jovi%')
+select distinct(artist) from tutorial.billboard_top_100_year_end
+select artist from tutorial.billboard_top_100_year_end where group_name like '%katy%'
+
+    SELECT *
+      FROM tutorial.billboard_top_100_year_end
+     WHERE year_rank <= 10
+       AND (group_name ILIKE '%katy perry%' OR group_name ILIKE '%bon jovi%')
+       
+select * from tutorial.billboard_top_100_year_end 
+where song_name Ilike '%california%' 
+and (year between 1970 and 1979 or year between 1990 and 1999)
+
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE song_name LIKE '%California%'
+   AND (year BETWEEN 1970 AND 1979 OR year BETWEEN 1990 AND 1999) 
+   
+SELECT * from tutorial.billboard_top_100_year_end
+where group_name Ilike '%dr. dre%' 
+and (year <= 2000 or year >= 2010)
+
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE group_name ILIKE '%dr. dre%'
+   AND (year <= 2000 OR year >= 2010)
+
+select * from tutorial.billboard_top_100_year_end where artist not like 'a%'
+
+select * from tutorial.billboard_top_100_year_end where year = 2013 and artist is not null
+
+select * from tutorial.billboard_top_100_year_end where year = 2013 and song_name not like '%a%'
+
+select * from tutorial.billboard_top_100_year_end order by artist
+
+select * from tutorial.billboard_top_100_year_end where year = 2013 order by artist
+
+select * from tutorial.billboard_top_100_year_end where year = 2013 order by year_rank desc
+
+select * from tutorial.billboard_top_100_year_end where year = 2012 order by song_name desc
+
+select * from tutorial.billboard_top_100_year_end where year_rank <= 3 order by year desc , year_rank 
+
+select * from tutorial.billboard_top_100_year_end where year_rank <=3 order by year_rank , year desc
+
+select * from tutorial.billboard_top_100_year_end where year = 2010 order by year_rank , artist 
+
+select * from tutorial.billboard_top_100_year_end where group_name ilike '%T-Pain%' order by year_rank desc
+
+select * from  tutorial.billboard_top_100_year_end where year_rank between 10 and 20 and year in (1993 , 2003 , 2013)
+order by year , year_rank
+

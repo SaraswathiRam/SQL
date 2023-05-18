@@ -1,0 +1,61 @@
+select * from tutorial.us_housing_units;
+select west as west_region , south as south_region from tutorial.us_housing_units;
+select * from tutorial.us_housing_units limit 100;
+select * from tutorial.us_housing_units where year = 1968
+select count(*) from tutorial.us_housing_units where year=1968
+select * from tutorial.us_housing_units
+select * from tutorial.us_housing_units where west > 30
+select year,month,month_name,west from tutorial.us_housing_units where west > 30
+select * from tutorial.us_housing_units where midwest >= 40
+select * from tutorial.us_housing_units where south < 60
+select * from tutorial.us_housing_units where south <= 35
+select * from tutorial.us_housing_units where month = 2
+select * from tutorial.us_housing_units where month <>1
+select count(*) from tutorial.us_housing_units
+select sum(west) as total_houses_sold_in_west from tutorial.us_housing_units
+select sum(west*1000) as total_houses_sold_in_west from tutorial.us_housing_units
+select * from tutorial.us_housing_units
+select month , month_name , west from tutorial.us_housing_units where west > 50
+select month , month_name , south from tutorial.us_housing_units where south <= 20 
+select month , month_name , west from tutorial.us_housing_units where month_name <>'January'
+select month , month_name , west from tutorial.us_housing_units where month_name >'J'
+select * from tutorial.us_housing_units where month = 2
+select * from tutorial.us_housing_units where month_name = 'February'
+select * from tutorial.us_housing_units where month_name < 'O'
+select year , month_name , west , south , south+west as sum_of_southAndwest from tutorial.us_housing_units
+select year , month_name , west , south , (south+west)/2 as avgof2 from tutorial.us_housing_units
+select * from tutorial.us_housing_units
+select month_name , south , west , midwest , northeast , south+west+midwest+northeast as sum_of_4_regions from tutorial.us_housing_units
+select * from tutorial.us_housing_units where year > 2000
+select year,month,
+west/(south+west+midwest+northeast)*100 as west_pct , 
+south/(south+west+midwest+northeast)*100 as south_pct,
+midwest/(south+west+midwest+northeast)*100 as midwest_pct,
+northeast/(south+west+midwest+northeast)*100 as northeast_pct
+from tutorial.us_housing_units
+where year >= 2000
+select * from tutorial.us_housing_units where west > midwest and west > northeast 
+select  year , month_name , west , midwest+northeast as sum_of_midwestAndnortheast from tutorial.us_housing_units where west >(midwest + northeast)
+select * from tutorial.billboard_top_100_year_end
+select count(*) from tutorial.billboard_top_100_year_end
+select * from tutorial.billboard_top_100_year_end order by year desc
+select * from tutorial.billboard_top_100_year_end where group_name like 'Peggy%' 
+select * from tutorial.billboard_top_100_year_end where artist like 'Pla__ers'
+select * from tutorial.billboard_top_100_year_end where artist like 'Four%'
+select * from tutorial.billboard_top_100_year_end where group_name like '%Ludacris%'
+select * from tutorial.billboard_top_100_year_end where group_name like 'DJ%'
+select * from tutorial.billboard_top_100_year_end where year_rank in (1,2,3)
+select * from tutorial.billboard_top_100_year_end where artist in ('Elvis Presley' , 'Pat Boone')
+
+select * from tutorial.billboard_top_100_year_end
+select  distinct artist from tutorial.billboard_top_100_year_end
+select distinct group_name from tutorial.billboard_top_100_year_end
+select distinct(group_name) from tutorial.billboard_top_100_year_end where group_name like '%Elvis%'
+select * from tutorial.billboard_top_100_year_end where group_name like '%Hammer%'
+select * from tutorial.billboard_top_100_year_end where group_name in ('Elvis Presley' , 'M.C. Hammer')
+
+select * from tutorial.billboard_top_100_year_end where year_rank between 5 and 10 
+select * from tutorial.billboard_top_100_year_end where year_rank >=5 and year_rank <= 10
+
+select * from tutorial.billboard_top_100_year_end where artist is null
+
